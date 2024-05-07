@@ -1,0 +1,25 @@
+.container.form-details {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.container.form-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.container.form-details p {
+    margin-bottom: 10px;
+}
+
+.container.form-details strong {
+    font-weight: bold;
+}
+
+.container.form-details p:last-child {
+    margin-bottom: 0;
+}

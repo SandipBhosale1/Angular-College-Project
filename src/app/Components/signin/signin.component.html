@@ -1,0 +1,20 @@
+<form class="container" [formGroup]="signInForm" (ngSubmit)="signIn()">
+  <legend class="text-center ">Sign In</legend>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+    <div *ngIf="signInForm.get('email').invalid && (signInForm.get('email').dirty || signInForm.get('email').touched)" class="error-msg">
+      <span *ngIf="signInForm.get('email').errors.required">Email is required.</span>
+      <span *ngIf="signInForm.get('email').errors.email">Please enter a valid email address.</span>
+    </div>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+    <div *ngIf="signInForm.get('password').invalid && (signInForm.get('password').dirty || signInForm.get('password').touched)" class="error-msg">
+      <span *ngIf="signInForm.get('password').errors.required">Password is required.</span>
+      <span *ngIf="signInForm.get('password').errors.minlength">Password must be at least 6 characters long.</span>
+    </div>
+  </div>
+  <button type="submit" [disabled]="signInForm.invalid">Sign In</button>
+</form>
